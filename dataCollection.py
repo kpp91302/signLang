@@ -10,7 +10,7 @@ detector = HandDetector(maxHands=1)
 offset = 20
 imgSize = 300
 
-folder = 'images/A'
+folder = 'images/y'
 counter = 0
 
 while True:
@@ -49,6 +49,8 @@ while True:
 
         #show image on window
         cv2.imshow('ImageWhite', imgWhite)
+    else:
+        cv2.putText(img, "No hand detected", (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
 
     cv2.imshow('Image',img)
     key = cv2.waitKey(1)
